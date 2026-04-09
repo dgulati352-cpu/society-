@@ -1,0 +1,82 @@
+{
+  "status": "success",
+  "result": [
+    {
+      "projectId": "astro-3e6f8",
+      "projectNumber": "229286359447",
+      "displayName": "astro",
+      "name": "projects/astro-3e6f8",
+      "resources": {
+        "hostingSite": "astro-3e6f8"
+      },
+      "state": "ACTIVE",
+      "etag": "1_81eee6cb-7fed-46be-ae3f-03503a1652f6"
+    },
+    {
+      "projectId": "chat-port-8fcdb",
+      "projectNumber": "489522583145",
+      "displayName": "chat port",
+      "name": "projects/chat-port-8fcdb",
+      "resources": {
+        "hostingSite": "chat-port-8fcdb"
+      },
+      "state": "ACTIVE",
+      "etag": "1_2ccc3cb4-87db-4225-a56e-68f8703ea93f"
+    },
+    {
+      "projectId": "deepthink-c6fd4",
+      "projectNumber": "759368054926",
+      "displayName": "DEEPTHINK",
+      "name": "projects/deepthink-c6fd4",
+      "resources": {
+        "hostingSite": "deepthink-c6fd4"
+      },
+      "state": "ACTIVE",
+      "etag": "1_98886573-e0e7-4136-bf41-b68c6f05c4d1"
+    },
+    {
+      "projectId": "gen-lang-client-0571960597",
+      "projectNumber": "794455634314",
+      "displayName": "Gemini Project",
+      "name": "projects/gen-lang-client-0571960597",
+      "resources": {
+        "hostingSite": "gen-lang-client-0571960597"
+      },
+      "state": "ACTIVE",
+      "etag": "1_989fd8fb-d96d-4d54-9e86-bdcf9aa1b881"
+    },
+    {
+      "projectId": "silicon-stock-425107-q4",
+      "projectNumber": "987350308374",
+      "displayName": "My Maps Project",
+      "name": "projects/silicon-stock-425107-q4",
+      "resources": {
+        "hostingSite": "silicon-stock-425107-q4"
+      },
+      "state": "ACTIVE",
+      "etag": "1_c793081d-a322-473c-99e3-90cf701839b2"
+    },
+    {
+      "projectId": "society-35c9e",
+      "projectNumber": "884781096662",
+      "displayName": "society",
+      "name": "projects/society-35c9e",
+      "resources": {
+        "hostingSite": "society-35c9e"
+      },
+      "state": "ACTIVE",
+      "etag": "1_b820fabd-9f7b-4871-9858-6bc0948c4d05"
+    },
+    {
+      "projectId": "whatsapp-2eebe",
+      "projectNumber": "255469820332",
+      "displayName": "whatsapp",
+      "name": "projects/whatsapp-2eebe",
+      "resources": {
+        "hostingSite": "whatsapp-2eebe"
+      },
+      "state": "ACTIVE",
+      "etag": "1_88ed31f8-0f42-4b5b-847d-a674877416ee"
+    }
+  ]
+}

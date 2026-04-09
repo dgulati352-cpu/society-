@@ -1,0 +1,12 @@
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 1522 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mmember-panel/index.html    [39m[1m[2m  0.65 kB[22m[1m[22m[2m Γöé gzip:  0.40 kB[22m
+[2mdist/[22m[32madmin-panel/index.html     [39m[1m[2m  0.65 kB[22m[1m[22m[2m Γöé gzip:  0.41 kB[22m
+[2mdist/[22m[35massets/index-DyXg8YhL.css  [39m[1m[2m  6.46 kB[22m[1m[22m[2m Γöé gzip:  1.86 kB[22m
+[2mdist/[22m[36massets/admin-RSoXj8Fs.js   [39m[1m[2m 27.74 kB[22m[1m[22m[2m Γöé gzip:  5.96 kB[22m
+[2mdist/[22m[36massets/main-BLgdD6yn.js    [39m[1m[2m176.19 kB[22m[1m[22m[2m Γöé gzip: 37.58 kB[22m
+[2mdist/[22m[36massets/index-A81QAg1A.js   [39m[1m[2m272.97 kB[22m[1m[22m[2m Γöé gzip: 89.97 kB[22m
+[32mΓ£ô built in 4.53s[39m

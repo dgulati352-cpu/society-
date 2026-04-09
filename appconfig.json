@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "result": {
+    "@type": "type.googleapis.com/google.firebase.service.v1beta1.WebApp",
+    "name": "projects/society-35c9e/webApps/1:884781096662:web:0f3f97a2c5202d615c3377",
+    "appId": "1:884781096662:web:0f3f97a2c5202d615c3377",
+    "displayName": "society-web",
+    "projectId": "society-35c9e",
+    "webId": "MWVmZTczOWUtZTk3Yy00MjZiLTk2MzktMzhlYmRhOTcyZjY5",
+    "apiKeyId": "4535d4b3-4eec-44d9-88cf-6b358fdcd79e",
+    "state": "ACTIVE",
+    "expireTime": "1970-01-01T00:00:00Z",
+    "etag": "1_872ca44d-7a78-4daa-a793-d60e8dd93c97"
+  }
+}
