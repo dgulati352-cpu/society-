@@ -13,6 +13,7 @@ import AdminUsers from './AdminUsers';
 import AdminEmergency from './AdminEmergency';
 import AdminEventRequests from './AdminEventRequests';
 import AdminMaintenance from './AdminMaintenance';
+import AdminFines from './AdminFines';
 
 export default function AdminLayout() {
   const [notification, setNotification] = useState(null);
@@ -69,6 +70,7 @@ export default function AdminLayout() {
           <Route path="/emergency" element={<AdminEmergency />} />
           <Route path="/events" element={<AdminEventRequests />} />
           <Route path="/maintenance" element={<AdminMaintenance />} />
+          <Route path="/fines" element={<AdminFines />} />
           <Route path="/settings" element={<AdminSettings />} />
         </Routes>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../../shared/db';
-import { LayoutDashboard, Megaphone, MessageSquareWarning, BookOpen, Building2, LogOut, Settings, Users, PhoneCall, Wallet, Calendar } from 'lucide-react';
+import { LayoutDashboard, Megaphone, MessageSquareWarning, BookOpen, Building2, LogOut, Settings, Users, PhoneCall, Wallet, Calendar, Gavel } from 'lucide-react';
 import { useAdmin } from './AdminApp';
 
 export default function AdminSidebar() {
@@ -49,6 +49,10 @@ export default function AdminSidebar() {
         <NavLink to="/maintenance" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <Wallet size={20} />
           Broadcast Dues
+        </NavLink>
+        <NavLink to="/fines" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <Gavel size={20} />
+          Management Fines
         </NavLink>
         <NavLink to="/users" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <Users size={20} />

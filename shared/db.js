@@ -10,7 +10,11 @@ db.version(4).stores({
   users: '++id, email, name, flatNumber, status',
   emergency: '++id, title, number, iconName, color',
   eventRequests: '++id, userId, userName, flatNumber, title, date, endDate, startTime, endTime, lateNight, status, createdAt, notified',
-  maintenance: '++id, month, amount, dueDate, status, createdAt'
+  maintenance: '++id, month, amount, dueDate, status, createdAt',
+  societySettings: 'id, name, address, contact, logo, currency',
+  maintenanceReports: '++id, month, totalCollected, totalPending, generatedAt',
+  fines: '++id, userId, userName, flatNumber, reason, amount, status, createdAt',
+  maintenanceRecords: '++id, billId, userId, userName, flatNumber, month, amount, dueDate, status, paidAt, createdAt'
 });
 
 // Add some initial mock data if empty
