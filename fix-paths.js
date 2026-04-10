@@ -1,53 +1,29 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-function replaceInDir(dir, replacements) {
-  const files = fs.readdirSync(dir);
-  for (const file of files) {
-    const fullPath = path.join(dir, file);
-    if (fs.statSync(fullPath).isDirectory()) {
-      replaceInDir(fullPath, replacements);
-    } else if (fullPath.endsWith('.jsx') || fullPath.endsWith('.html')) {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      
-      // Apply exact replacements
-      for (const [oldStr, newStr] of replacements) {
-        content = content.split(oldStr).join(newStr);
-      }
-      
-      fs.writeFileSync(fullPath, content);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const target = process.env.VITE_TARGET;
+const distPath = path.resolve(__dirname, 'dist');
+
+if (target === 'admin' || target === 'member') {
+    const panelDir = target === 'admin' ? 'admin-panel' : 'member-panel';
+    const sourceIndex = path.join(distPath, panelDir, 'index.html');
+    const targetIndex = path.join(distPath, 'index.html');
+
+    if (fs.existsSync(sourceIndex)) {
+        fs.copyFileSync(sourceIndex, targetIndex);
+        console.log(`Successfully moved ${panelDir}/index.html to root dist/index.html`);
+        
+        let html = fs.readFileSync(targetIndex, 'utf8');
+        // Vite's build with base: './' in a subfolder uses '../assets/' to reach the root assets folder.
+        // Since we moved the file to the root, we need to change '../assets/' to './assets/'.
+        html = html.replace(/\.\.\/assets\//g, './assets/'); 
+        fs.writeFileSync(targetIndex, html);
+        console.log('Fixed asset paths for root deployment.');
+    } else {
+        console.error(`Source index not found at ${sourceIndex}`);
     }
-  }
 }
-
-// member-panel/src/components/*.jsx => need ../../../shared
-replaceInDir('d:/society/member-panel/src/components', [
-  ["from '../../shared/db'", "from '../../../shared/db'"],
-  ["from '../../shared/firebase'", "from '../../../shared/firebase'"],
-  ["from '../../src/db'", "from '../../../shared/db'"]
-]);
-
-// admin-panel/src/*.jsx => need ../../shared
-replaceInDir('d:/society/admin-panel/src', [
-  ["from '../shared/db'", "from '../../shared/db'"],
-  ["from '../shared/firebase'", "from '../../shared/firebase'"],
-  ["from '../../src/db'", "from '../../shared/db'"]
-]);
-
-// main.jsx
-replaceInDir('d:/society/member-panel/src', [
-  ["import '../shared/index.css'", "import '../../shared/index.css'"]
-]);
-
-// main-admin.jsx
-replaceInDir('d:/society/admin-panel/src', [
-  ["import '../shared/index.css'", "import '../../shared/index.css'"]
-]);
-
-// vite.config.js inputs
-let vite = fs.readFileSync('d:/society/vite.config.js', 'utf8');
-vite = vite.split("'index.html'").join("'member-panel/index.html'");
-vite = vite.split("'admin/index.html'").join("'admin-panel/index.html'");
-fs.writeFileSync('d:/society/vite.config.js', vite);
-
-console.log("Done");
